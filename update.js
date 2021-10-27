@@ -163,6 +163,3 @@ ParticleSlider.prototype.requestAnimationFrame=function(a)
 {
 	var b=this,c=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(a){window.setTimeout(a,1e3/60)};c(a)}
 ; 
-
-update-file.js
-Displaying update-file.js.
