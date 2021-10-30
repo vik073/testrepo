@@ -1,0 +1,32 @@
+<div class="card-container padding-style int-width-height" *ngIf="LoadAnimationCard =='animation-card'">
+    
+       <img   *ngIf="img" class="img padding-style" src={{cardData.imgsrc}}>
+             
+    <div>
+  <div class="div-header padding-style">{{cardData.title}}
+
+    <br>
+  </div>
+    <p class="size">{{cardData.description}}</p>
+  </div>
+  
+  <div class="btn "><button  [routerLink]="['/Appointment']" class="btn" >{{cardData.option}}</button></div>
+</div>
+
+<div  class="card-container , padding-style, int-card" *ngIf="LoadAnimationCard =='interventual-card'">
+  <div class="div-header padding-style ">{{cardData.title}}
+   
+  </div>
+  
+  <div style="flex: 1" class="div-description padding-style">{{cardData.description}}</div>
+  <div class="btn"><button class="btn" [routerLink]="['/Appointment']">{{cardData.option}}</button></div>
+
+</div>
+<div class="card-container   num-4"  *ngIf="LoadAnimationCard =='service-card'" [ngStyle]="{'background' : 'transparent', 'box-shadow': 'none' }">
+    
+  <img class="img" src={{cardData.imgsrc}}>
+
+  
+<div  style="margin-top: 20px;" class="div-header">{{cardData.title}}</div>
+<div style="flex: 1; text-align: center;margin-top:15px;"  class="div-description">{{cardData.description}}</div>
+</div>

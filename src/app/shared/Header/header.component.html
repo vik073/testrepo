@@ -1,0 +1,44 @@
+<div *ngIf ="!mobileview"  class="container" style="
+box-shadow: 10px 10px 110px 20px rgba(0,0,0,0.19);
+">
+  <a class="logo" href="/home"> <img class="img-size" src="../../../assets/images/logo.PNG" >
+  </a>
+    <div class="right-bar">
+      <!-- https://www.facebook.com/vasucardiaccare/ -->
+      
+      <a class="nav-option" href="/Appointment" >Appointment</a>
+      <div class="nav-option" (click)="getValue('services')"> Services</div>
+      <a class="nav-option" href="/home">About</a>
+      
+      <a class="nav-option" href="/GetHealthy" >Cost Estimation</a>
+      <a class="nav-option" href="/home">FAQ</a>
+      <a class="nav-option" (click)="getValue('contact_us')">Contact Us</a>
+    </div>
+</div>
+<div *ngIf ="mobileview" id = "header-c" class="container-mobile" style="
+box-shadow: 10px 10px 110px 20px rgba(0,0,0,0.19);
+">
+  <div class="logo-m" >
+    <a href="/home">
+    <img style="outline: none; width: 104px;" src="../../../assets/images/Group 6 (1).svg"  (click) = "closenav()"></a>
+    <img  class="margin" *ngIf ="show" src="../../../assets/Group 413.svg" (click) = "closenav()" >
+    <img class="margin" *ngIf ="!show" src="../../../assets/Group 4416.svg" (click) = "shownav()" >
+ 
+   
+  </div>
+    <div   id="nav" class="right-bar-m">
+      <div class="display" *ngIf ="show">      <a  class="service-card" href="/{{item}}" *ngFor= " let item of options let j = index;"  (click)="setService(j , item)" [ngClass]="{'highlight': selectedIndexj === j ,'Service-card':!mobileview , 'mobile-Service-card': mobileview } ">{{item}}</a>
+      
+        <p>20-3-126, Leela Mahal Circle  <br>
+          Near Reliance Digital, Tirumala <br>Bypass Road,
+          Tirupati <br>Andhra Pradesh 517501
+        <br>
+        <br>
+        +91 9347 830 894 | 0877 -2272666
+        </p>
+      </div>
+     
+
+    </div>
+</div>
+

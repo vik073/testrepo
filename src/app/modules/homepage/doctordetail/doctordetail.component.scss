@@ -1,0 +1,96 @@
+@import '../../../../mixin.scss';
+@import '../../../../common.scss';
+
+.container-d{
+    display: flex;
+    flex: 1;
+   
+    color: #f1f1f1;
+    overflow-y: hidden;
+    flex-direction: column;
+}
+.img{
+
+}
+.div-1{
+    display: flex;
+    flex: 1;
+    padding: 8% 12%;
+    font-family: Poppins-bold;
+    background: #D92A2A;
+    flex-direction: column;
+}
+.center{
+    text-align: center;
+}
+
+h1{
+    font-family: poppins-bold;
+    @include fluid-type(font-size, 800px, 1920px, 2.1em, 2.4em);
+}
+h2{
+    font-family: poppins;
+    @include fluid-type(font-size, 800px, 1920px, 1.2em, 2em);
+}
+p{
+    font-family: poppins-regular;
+    @include fluid-type(font-size, 700px, 1920px, 0.8em, 1.3em);
+}
+
+
+.red{
+    color: #D92A2A;
+}
+.bold{
+    font-family: poppins-bold;
+}
+.div-2{
+    display: flex;
+    flex: 1;
+    background-color: #ffffff;
+        padding-left:  12%;
+    font-family: Poppins;
+    color: black;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+.docdetails{
+    margin-bottom: 70px;
+    padding-top: 5%;
+    flex: 1;
+}
+.img{
+    width: 100%;
+margin-bottom: -8px;
+}
+.coloumn{
+    flex-direction: column;
+}
+.coloumn-rev{
+    flex-direction: column-reverse;
+}
+.right{
+    padding-right: 12%;
+    
+    text-align: end;
+
+}
+.doc-image{
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
+}
+.background-white{
+    background-color: #ffffff;
+
+}
+.background-black{
+    background-color: black;
+    color: #f1f1f1;
+
+}
+
+.card-mobile{
+    flex-direction: column;
+
+}

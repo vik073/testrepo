@@ -1,0 +1,25 @@
+<div class="" [ngClass] = "!mobileview?'container padder':'container'" >
+  <br>
+  <br>
+  <br>
+  <br>
+          <div class="right-bar" [ngClass] = "!mobileview?'row':'col'">
+            <div style="cursor: pointer;"  routerLink="/{{item}}" *ngFor= " let item of options let j = index;"  (click)="setService(j , item)" [ngClass]="{'highlight': selectedIndexj === j ,'nav-option':!mobileview , 'mob': mobileview } ">{{item}}</div>
+      
+            <!-- <div [ngClass] = "!mobileview?'nav-option':'mob'">Appointment</div>
+            <div [ngClass] = "!mobileview?'nav-option':'mob'">Services</div>
+            <div [ngClass] = "!mobileview?'nav-option':'mob'">About</div>
+            <div [ngClass] = "!mobileview?'nav-option':'mob'">Get Healthy</div>
+            <div [ngClass] = "!mobileview?'nav-option':'mob'">FAQ</div>
+            <div [ngClass] = "!mobileview?'nav-option':'mob'">Contact Us</div> -->
+          </div>
+          <br>
+          <p class="content">Vasu Cardiac Care © 2019 <br>All rights reserved</p>
+          <a href="https://www.kurage.in" >
+          <p  class="content">Like what you see? Site designed & developed by Kurage</p></a>
+
+          <!-- <div class="ad-bar">
+              <p class="content content1"> Vasu Cardiac Care © 2019 All rights reserved</p>
+              <p class="content1 "> Like what you see? Site designed & developed by Kurage</p>
+          </div> -->
+      </div>

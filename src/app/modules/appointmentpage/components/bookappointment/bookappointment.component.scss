@@ -1,0 +1,383 @@
+@import '../../../../../mixin.scss';
+@import '../../../../../common.scss';
+
+.main-container{
+    width: 100vw;
+    height: 100vh;
+}
+// #header{
+//     position: fixed;
+// }
+.background{
+    background-color:#F1F1F1;
+    height: auto;
+}
+.flex-0{
+    flex: 0;
+}
+
+.intro-content{
+    height: 40vw;
+    background-position-y: 13px;
+    background-position-x: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: -8%;
+   background-image: url("../../../../../assets/images/appointmnet-01.svg");
+    @include flexbox;
+    @include flex-direction(column);
+    @include flex(2);
+    @include justify-content(center);
+} 
+
+.mobile-intro-content{
+    height: auto;
+    @include flexbox;
+    @include flex-direction(column);
+    @include flex(2);
+    @include justify-content(center);
+    @include flex-wrap(wrap);
+} 
+.set-header::ng-deep.container{
+    position: sticky;
+}
+
+.description{
+    width: 55%;
+    margin-top: 14px;
+    @include justify-content(center);
+    font-family: poppins-regular;
+    @include fluid-type(font-size, 200px, 1920px, 10px, 24px);
+    letter-spacing: 0;
+    color: #D92A2A;
+    opacity: 1;
+}
+.mobile-description{
+    margin-top: 14px;
+    @include justify-content(center);
+    font-family: poppins-regular;
+    @include fluid-type(font-size, 200px, 1920px, 10px, 24px);
+    letter-spacing: 0;
+    color: #D92A2A;
+    opacity: 1;
+}
+.full-width{
+    width: 100%;
+}
+.mobile-service-list{
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.date-picker{
+    @include flexbox;
+    @include flex-direction(row);
+    @include flex(1);
+    //width: 50%;
+    // @include justify-content(space-between);
+    @include flex-wrap(wrap);
+
+}
+.mobile-card{
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+
+}
+.desktop-card{
+    flex-direction: row;
+}
+
+.Service-cards {
+    @include flexbox;
+    @include flex-direction(row);
+    @include flex(2);
+     width: 50%;
+    @include justify-content(space-between);
+    @include flex-wrap(wrap);
+}
+
+.Service-card {
+    @include flexbox;
+    width: 47%;
+    height: 63px;
+    @include align-items(center);
+    @include justify-content(center);
+    font-family: poppins;
+    @include fluid-type(font-size, 800px, 1920px, 14px, 23px);
+    //@include fluid-type(height, 200px, 1920px, 40px, 70px);
+   // @include fluid-type(width, 300px, 1920px, 60px, 320px);
+
+    color: #D92A2A;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    //@include flex(1);
+    background: #FFFFFF;
+    
+}
+
+.center-header{
+    display: flex;
+    justify-content: center;
+    margin-top: 6%;
+}
+.mobile-Service-card{
+    @include flexbox;
+     width: 100%;
+     border-radius: 20px;
+     height: 50px;
+    @include align-items(center);
+    @include justify-content(center);
+    font-family: poppins;
+    font-size: 18px;
+    //@include fluid-type(height, 200px, 1920px, 40px, 70px);
+   // @include fluid-type(width, 300px, 1920px, 60px, 320px);
+
+    color: #D92A2A;
+    margin-top: 20px;
+    //@include flex(1);
+    background: #FFFFFF;
+
+}
+.heading{
+    font-family: poppins-bold;
+    @include fluid-type(font-size, 700px, 1920px, 25px, 30px);
+    margin-top: 5%;
+    height: 40px;
+    margin-bottom: .5%;
+    color: #D92A2A;
+}
+.extra-pad{
+    margin-top: 70px;
+}
+.timing-set{
+     background: white;
+     width: 13%;
+     padding-left: 2%;
+     padding-right: 2%;
+     margin:3%;
+     text-align: center;
+     box-shadow: 0px 3px 10px #0000000D;
+     @include flex-direction(row);
+     
+}
+
+.disabled{
+    cursor: no-drop;
+    background: grey;
+}
+
+
+
+
+.black-header{
+    background: black;
+    color: white;
+    font-size: 1.7em;
+    background: black;
+    color: white;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+    font-family: poppins-regular;
+    font-family: poppins-regular;
+    text-align: center;
+}
+.date-selector{
+    @include flexbox;
+   @include flex-wrap(wrap);
+ 
+ 
+    flex-direction: row;
+    /* height: 100px; */
+    flex: 0.5;
+
+}
+.date-picker{
+    @include flexbox;
+    @include flex(1);
+    margin-bottom: 2%;
+   @include flex-wrap(wrap);
+    @include justify-content(flex-start);
+    overflow: hidden;
+    
+    /* height: 100px; */
+
+}
+
+.time-selector{
+    @include flexbox;
+    @include flex(1);
+   @include flex-wrap(wrap);
+    @include flex-direction(row);
+    //width: 40%;
+    @include align-items(center);
+    // @include justify-content(center);
+    font-family: poppins-regular;
+    @include fluid-type(font-size, 300px, 1920px, 16px, 22px);
+    color: #D92A2A;
+    /* height: 100px; */
+}
+.full-w{
+    width: 100%;
+}
+
+.time-panel{
+    @include flexbox;
+    @include flex(1);
+   @include flex-wrap(wrap);
+   @include flex-direction(column);
+    max-width: 680px;
+    min-height: 349px;
+    margin-bottom: 30px;
+    //@include fluid-type(width, 300px, 1920px, 232px, 280px);
+    background-color: white;
+}
+
+.input-form{
+    @include flexbox;
+    @include flex-direction(column);
+    @include flex(1);
+
+}
+.profile-form{
+    @include flexbox;
+    @include flex-direction(row);
+    @include flex(1);
+    margin-bottom: 30px;
+    width: 90%;
+    @include justify-content(space-between)
+
+}
+.text-box{
+    
+    background: #F1F1F1;
+   color: #D92A2A;
+   margin-top: 22px;
+   margin-bottom: 12px;
+    border-bottom: 1px solid #D92A2A;
+}
+::placeholder {
+    color: #D1D1D1;;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #D92A2A;;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: #D92A2A;;
+  }
+
+.address-bar{
+    width: 139%;
+}
+
+
+.submit-btn{
+    width: 100%;
+    @include flexbox;
+    @include justify-content(center);
+    margin-top: 3%;
+    margin-bottom: 14%;
+}
+.highlight{ 
+    background-color: #D92A2A;
+    color: white;
+}
+.owl-dt-calendar{
+    background: #D92A2A;
+}
+.profile-form{
+    @include flexbox;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+}
+.header-bl::ng-deep.owl-dt-calendar-control{
+    background: black;
+    color: #FFFFFF;
+    padding: 29px;
+    font-size: 1.7em;
+    height: 72px;
+}
+.margin-left{
+    margin-left: 10%;
+
+}
+
+.desktop-header-bl::ng-deep.owl-dt-inline-container, .owl-dt-popup-container{
+    @include fluid-type(width, 700px, 1920px, 340px, 680px);
+    @include fluid-type(height, 900px, 1920px, 400px, 650px);
+    background: transparent;
+    position: unset;
+}
+.mobile-header-bl::ng-deep.owl-dt-inline-container, .owl-dt-popup-container{
+    @include fluid-type(width, 500px, 900px, 300px, 800px);
+    @include fluid-type(height, 500px, 900px, 370px, 710px);
+ 
+    pointer-events: auto;
+    box-shadow: none;
+    background: white;
+    padding-bottom: 32px;
+    margin-bottom: 3%;
+    background: transparent;
+    position: unset;
+}
+.header-bl::ng-deep.owl-dt-calendar-table .owl-dt-calendar-cell-content{
+    font-family: poppins;
+    font-size: 1em;
+}
+.header-bl::ng-deep.owl-dt-inline-container{
+    display: block;
+    font-size: 16px;
+    font-size: 1rem;
+    pointer-events: auto;
+    box-shadow: none;
+    background: white;
+    margin-bottom: 1%;
+    
+}
+.position-fix::ng-deep.owl-dt-inline-container, .owl-dt-popup-container{
+    width: 100%;
+    position: unset;
+    // display: flex;
+    // flex: 1;
+}
+.header-color::ng-deep.owl-dt-calendar-table .owl-dt-calendar-header .owl-dt-weekdays th {
+    @include fluid-type(font-size, 900px, 1920px, 16px, 20px);
+    width: 3em;
+    font-family: poppins-regular;
+    font-weight: 400;
+    color: #D92A2A;
+    text-align: center;
+    margin-left: 5em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+.arrow-hide ::ng-deep.owl-dt-control-period-button .owl-dt-control-button-arrow {
+    display: none;
+}
+.user-css-class ::ng-deep.owl-dt-calendar-table .owl-dt-calendar-cell-selected {
+    color: white;
+    background: #D92A2A;
+  }
+  
+  .user-css-class.owl-form-field-focused  .owl-form-field-underline-graphic {
+    stroke: #00897b;
+  }
+  .disable{
+    opacity: 30%;
+}
+.full-w-n{
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+.full-w-t{
+    
+    width: 80%;
+}

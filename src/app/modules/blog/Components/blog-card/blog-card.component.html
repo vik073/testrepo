@@ -1,0 +1,11 @@
+<div class=""  [ngClass]="!mobileview?'container':'mobile-container'" *ngIf="LoadAnimationCard" (swipe)="getclickValue($event)">
+    
+  <div class="header" [ngClass]="!mobileview?'d-font':'text-align m-font'"><div class="title"> {{cardData.title}}</div>
+<div class="title-detail" [ngClass]="!mobileview?'':'text-align'">{{cardData.titledetail}}</div> </div>
+  <img class="img" src={{cardData.imgsrc}}>
+
+
+<div class="description" [ngClass]="!mobileview?'':''">{{cardData.description}}</div>
+</div>
+
+

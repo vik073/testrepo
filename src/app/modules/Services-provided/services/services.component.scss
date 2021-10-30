@@ -1,0 +1,50 @@
+@import '../../../../mixin.scss';
+@import '../../../../common.scss';
+
+.service-container-background{
+    padding: 5% 8%;
+    background-size: cover;
+    
+  //@include fluid-type(background-position-x, 300px, 1920px, -55px, 0px);
+  opacity: 0.9;
+  //background-size: 100vw  90vh;
+  // background-image: "../../../../assets/images/frontiers1a.jpg";
+  //background: transparent;
+  //position: absolute;
+   z-index: 1;
+   background-position-x: right;
+   background-size: contain;
+   
+   background-repeat: no-repeat;
+   background-color:white;
+   height: auto;
+}
+.dot{
+    font-size: 3em; 
+    color: #D92A2A;
+    opacity: 30%;
+}
+.dot-flex{
+    display: flex;
+    flex-direction: row;
+}
+.highlight{
+    opacity: 100%;
+    color: #D92A2A;
+}
+.b-d-image{
+    background-image: url("../../../../assets/Night-City.png");
+    background-size: cover;
+}
+.b-m-image{
+    background-image: url("../../../../assets/frontiers-final-311.jpg");
+}
+
+.procedure-card{
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}

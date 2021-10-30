@@ -1,0 +1,56 @@
+<div style="background-color:#D92A2A;"  [ngClass]="!mobileview?'main-container':''">
+  <br><br>
+  <div class=" padder" [ngClass]="!mobileview?'container':''" >
+  
+  <div class="content" [ngClass]="!mobileview?'':'full-width'">
+    <div class="header white ad-header" [ngClass]="!mobileview?'':'mobile-red-header full-width'"> Address</div>
+    <div class=" flex-start description white flex-start" [ngClass]="!mobileview?'':' mobile-red-header full-width'">
+      20-3-126, Leela Mahal Circle <br> Near Reliance Digital, Tirumala <br> Bypass Road, Tirupati <br> Andhra Pradesh 517501<br>
+      <br><br>
+      +91 9347 830 894 | 0877 -2272666
+      <br>
+      <br>
+      <div class="icons" [ngClass]="!mobileview?'':'flex-center'">
+      <a href = "https://www.facebook.com/vasucardiaccare/ " class="social"><img [ngClass]="!mobileview?'img':'social'"  src="../../../../assets/images/Group 4362.svg"></a>
+      <a href = "https://www.facebook.com/vasucardiaccare/ " class="social"><img [ngClass]="!mobileview?'img':'social'" src="../../../../assets/images/Group 4361.svg"></a>
+      <a href = "https://twitter.com/VasuCardiacCare/ " class="social"><img [ngClass]="!mobileview?'img':'social'"  src="../../../../assets/images/twitter (1).svg"></a>
+    </div>
+    </div>
+  </div>
+  <div class="img-animation">
+    <agm-map  class="map-area"
+  [latitude]="lat"
+  [longitude]="lng"
+  [zoom]="zoom"
+  [disableDefaultUI]="false"
+  [zoomControl]="false"
+  >
+  <!-- (mapClick)="mapClicked($event)" -->
+  <agm-marker 
+      *ngFor="let m of markers; let i = index"
+      (markerClick)="clickedMarker(m.label, i)"
+      [latitude]="m.lat"
+      [longitude]="m.lng"
+      [label]="m.label"
+      [markerDraggable]="m.draggable"
+      (dragEnd)="markerDragEnd(m, $event)">
+      
+    <agm-info-window>
+      <strong>Vasu Cardiac Care</strong>
+    </agm-info-window>
+    
+  </agm-marker>
+  
+  <!-- <agm-circle [latitude]="lat + 0.3" [longitude]="lng" 
+      [radius]="5000"
+      [fillColor]="'red'"
+      [circleDraggable]="true"
+      [editable]="true">
+  </agm-circle> -->
+
+</agm-map>
+  </div>
+  
+</div>
+<app-footer class="footer" [mobileview]= "mobileview"></app-footer>
+</div>

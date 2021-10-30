@@ -1,0 +1,71 @@
+@import '../../../../../mixin.scss';
+@import '../../../../../common.scss';
+
+.background{
+    background-color:white;
+    height: auto;
+    
+}
+
+.mobile-header{
+    text-align: left;
+    font-weight: bold;
+    @include fluid-type(font-size, 200px, 600px, 16px, 33px);
+    font-family: poppins;
+    letter-spacing: 0;
+    width: 40%;
+    color: #D92A2A;
+    opacity: 1;
+    }
+.flex{
+    flex: 1
+}
+
+.mobile-description {
+    width:100%;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    @include justify-content(center);
+    font-family: poppins-regular;
+    font-size: 1em;
+    letter-spacing: 0;
+    color: #D92A2A;
+    opacity: 1;
+
+}
+.dot{
+    font-size: 3em; 
+    color: #D92A2A;
+    opacity: 30%;
+}
+.dot-flex{
+   @include flexbox;
+    @include flex-direction(row);
+
+}
+.highlight{
+    opacity: 100%;
+    color: #D92A2A;
+}
+.font-m{
+    font-size: 0.8em;
+    margin-bottom: 40px;
+}
+.font{
+    font-size: 1.3em;
+}
+
+.div-card{
+    @include flexbox;
+    @include flex-direction(row);
+    // margin-top: 5%;
+    @include justify-content(space-between);
+    @include flex-wrap(nowrap);
+    font-family: poppins;
+    
+}
+.mobile-view::-webkit-scrollbar { 
+    display: none; 
+} 
+
+

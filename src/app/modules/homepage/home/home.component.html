@@ -1,0 +1,45 @@
+<script src='https://gist.github.com/mrdoob/838785/raw/a19a753b441d6ad41707c58f06dbe17f3470423c/RequestAnimationFrame.js'></script>
+<script src='https://raw.github.com/mrdoob/stats.js/master/build/stats.min.js'>
+</script>
+<!-- <script  src="../assets//animation/heartanimation.js"></script> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+<div id="home" >
+  
+<div  id="canvas-container" class="canvas-container">
+
+<div style="height: 100vh;" class="touchhbar" >
+ 
+  <app-heart-animation [mobileview]="mobileview" [heartSize] ="heartSize" style="height: 100vh;"></app-heart-animation>
+    
+  <div  id="hell" class="text" >
+     <div style="margin-top: 31px;" *ngIf="!mobileview" class="main-text">WE KEEP YOUR <br> DREAMS IN SHAPE </div>
+     <div *ngIf="mobileview" class="main-text-m">WE KEEP YOUR  DREAMS IN SHAPE </div>
+  <div [ngClass]="!mobileview?'':'width-m'" class="description-text"> <div class="sub-text">ONE - STEP is dedicated to making big impacts through Work </div>
+    <div class="sub-text">  and services provided to your doorstep. </div></div> 
+    
+<div class="btn">
+  <button  [routerLink]="['/Appointment']" class="book-appointment btn">Book Appointment</button>
+</div>
+</div>
+</div>
+
+</div>
+<app-about id="about"></app-about>
+<app-interventional-procedures [AnimationCard]="AnimatedCard" [mobileview]="mobileview"></app-interventional-procedures>
+<app-services id="services" ></app-services>
+<!-- <div   (focus)="hello($event)" (scroll)="hello($event)"  id="rbgShiftSlider"></div> -->
+<app-makeappointment id="apointment" ></app-makeappointment>
+<app-interventional-procedures [AnimationCard]="ServiceCard" [mobileview]="mobileview"></app-interventional-procedures>
+<app-healthy-blog id="getHealthy" [mobileview]="mobileview"></app-healthy-blog>
+<app-contactus id="contact_us"  [mobileview]="mobileview"></app-contactus>
+<app-address [mobileview]="mobileview" ></app-address>
+
+<!--<app-footer class="footer"></app-footer>-->
+
+<!-- <app-footer class="address-bar" [mobileview]="mobileview"></app-footer> -->
+</div>
+
+

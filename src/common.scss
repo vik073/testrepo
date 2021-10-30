@@ -1,0 +1,220 @@
+@import './mixin.scss';
+
+.container{
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(space-between); 
+    padding: 5% 8%;
+    // @include fluid-type(height, 300px, 1920px, 100vh, 100vh);
+    //height: auto;
+    //@include fluid-type(height, 300px, 1920px, 468px, 900px);
+}
+.disabled{
+    cursor: no-drop;
+    background: grey;
+}
+
+.mobile-container{
+    @include flexbox;
+    @include flex-direction(column);
+    align-items: center;
+    @include justify-content(space-between); 
+    padding: 5% 5%;
+    background-color: #D92A2A;
+    height: auto;
+    // @include fluid-type(height, 200px, 1920px, 568px, 1080px)
+}
+
+
+.padder{
+    padding: 0% 8%;
+} 
+
+.mobile-view::-webkit-scrollbar { 
+    display: none; 
+} 
+
+.intro-content{
+    display: flex;
+    flex:1;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mobile-intro-content{
+    @include flexbox;
+    align-items: center;
+    text-align: center;
+    line-height: 1.5;
+    @include flex-direction(column);
+    @include justify-content(space-evenly);
+    @include flex(0.8);
+}
+
+.header{
+    @include flexbox;
+    @include flex(1);
+    text-align: left;
+    @include fluid-type(font-size, 300px, 1920px, 20px, 70px);
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+    font-family: poppins-bold;
+    letter-spacing: 0;
+    @include align-items(center);
+    letter-spacing: 0;
+    color: #D92A2A;
+    opacity: 1;
+}
+
+.mobile-red-header{
+    width: auto;
+    line-height: 1.2;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.black{
+    color: black;
+    @include flex(0.2);
+}
+.div-card{
+    @include flexbox;
+    @include flex(1);
+    font-family: poppins-medium;
+    // margin-top: 5%;
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+    padding-bottom: 5px;
+}
+
+// .div-card{
+//     @include flexbox;
+//     @include flex-direction(row);
+//     margin-top: 5%;
+//     @include flex(2);
+//     @include justify-content(space-between);
+//     @include flex-wrap(wrap);
+//     font-family: poppins;
+// }
+
+.mobile-view {
+    display: flex;
+    flex: 0 0 auto;
+    height: 20em;
+    width: 20em;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+}
+
+.white {
+       color: #FFFFFF;
+}
+
+.red {
+    color: #D92A2A;
+}
+
+.full-width{
+    justify-content: center;
+    width: 100%;
+}
+
+        .description{
+            @include flexbox;
+            @include flex-direction(column);
+            @include justify-content(center); 
+            font-family: poppins-regular;
+            flex: 1;
+            
+            margin-top: 10px;
+            line-height: 1.4;
+            font-size: 1.1em;
+            @include fluid-type(font-size, 600px, 1400px, 1em, 1.8em);
+            margin-bottom: 1em;  
+            letter-spacing: 0;
+            opacity: 1;
+        
+        } 
+        .half-desc{
+            width: 75%;
+        }
+
+        .no-margin{
+            margin: 0;
+        }
+
+        .btn:hover{
+            
+            transform: scale(1.05);
+            
+            
+        }
+        .btn{
+            transition: all .2s ease-in-out; 
+            text-align: center;
+            background-color: #D60F1B;
+            border-radius: 59px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            letter-spacing: 1px;;
+            font-size: 19.5px;
+            @include fluid-type(height, 300px, 1920px, 25px, 50px);
+            @include fluid-type(width, 300px, 1920px, 80px, 160px);
+            color: white;
+            
+        }
+
+        .text-box{
+            border-style: none;
+            background: #D92A2A;
+            outline: none;
+            margin-inline-end: 4%;
+            margin-bottom: 20px;
+            @include fluid-type(height, 300px, 1920px, 16px, 36px);
+            @include fluid-type(font-size, 300px, 1920px, 15px, 26px);
+            padding-bottom: 10px;
+            color: #F1F1F1;
+            border-bottom: 1px solid #F1F1F1;
+        }
+
+       
+        
+
+        .padding-style{
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+
+        .mobile-btn-red{
+            text-align: center;
+            background-color: #F1F1F1;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            @include fluid-type(font-size, 400px, 1920px, 1.2em, 2em);
+            width: auto;
+            outline: none;
+            padding-left: 1em;
+            padding-right: 1em;
+            @include fluid-type(height, 800px, 1620px, 2em, 2.1em);
+            // @include fluid-type(width, 400px, 1920px, 6em, 14em);
+            color: #D92A2A;
+    
+    }    
+    .mobile-btn{
+        text-align: center;
+            border-radius: 50px;
+            border: none;
+            @include fluid-type(font-size, 400px, 1920px, 1.5em, 2.3em);
+            width: auto;
+            cursor: pointer;
+            padding-left: 1em;
+            padding-right: 1em;
+            outline: none;
+            @include fluid-type(height, 400px, 1920px, 2em, 2em);
+
+    }    

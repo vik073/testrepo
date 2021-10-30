@@ -1,0 +1,89 @@
+@import '../../../../../mixin.scss';
+@import '../../../../../common.scss';
+
+  .card-container{
+    background-color: #fbfbfb;
+    @include flexbox;
+    @include flex(1);
+    @include flex-direction(column);
+    @include justify-content(space-evenly);
+    @include align-items(center);
+    @include flex-wrap(wrap);
+    margin: 0.4em;
+    height: auto;
+    margin-left: 0.4em;
+    padding: 1em;
+    padding-bottom: 2em;
+    box-shadow: 0px 0px 6px #00000029;
+
+
+}
+
+.int-width-height{
+
+     @include fluid-type(height, 600px, 1900px, 250px, 500px);
+    //  @include fluid-type(width, 600px, 1900px, 210px, 400px);
+}
+
+.div-header{
+text-align: center;
+@include fluid-type(font-size, 600px, 1600px, 1em, 1.7em);
+letter-spacing: 0;
+flex: 0.1;
+width: 100%;
+font-family: poppins-bold;
+color: #D60F1B;
+text-transform: uppercase;
+opacity: 1;
+}
+.size{
+  
+  @include fluid-type(font-size, 600px, 1600px, 13px, 20px);
+  text-align: center;
+}
+p{
+  width: 100%;
+    @include flexbox();
+    font-family: poppins-regular;
+    text-align: left;
+    line-height: 1.2;
+    align-items: flex-start;
+    color: #000000;
+    @include justify-content(center);
+    @include align-items(flex-start);
+    @include fluid-type(font-size, 700px, 1600px, 8.5px, 16px);
+}
+.div-description{
+    width: 100%;
+    @include flexbox();
+    font-family: poppins-regular;
+    text-align: center;
+    line-height: 1.4;
+    @include align-items(flex-start);
+    color: #000000;
+    @include justify-content(center);
+    @include fluid-type(font-size, 700px, 1950px, 9.5px, 16px);
+
+
+}
+.int-card{
+  // width: 14.5em;
+  height: 23em;
+}
+.num-4{
+  padding: 0.2em;
+  line-height: 1.5;
+
+  // @include fluid-type(height, 300px, 1900px, 80px, 580px);
+  // @include fluid-type(width, 300px, 1900px, 80px, 280px);
+  
+
+}
+.img{
+  @include fluid-type(height, 400px, 1620px, 7em, 13em);
+  @include fluid-type(width, 400px, 1620px, 7em, 13em);
+  // @include fluid-type(width, 300px, 1920px, 40px, 180px);
+  
+  // @include fluid-type(height, 300px, 1920px, 40px, 180px);
+  @include align-items(center);
+}
